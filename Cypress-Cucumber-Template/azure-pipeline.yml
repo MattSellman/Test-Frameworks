@@ -1,0 +1,44 @@
+
+trigger:
+  - master
+
+pool:
+  name: Azure Pipelines
+  demands: npm
+
+
+steps:  
+  - task: NodeTool@0
+    displayName: Set Node Version
+    inputs: 
+      versionSpec: '10.x'
+    
+  - script: |
+      npm install
+    displayName: 'npm install'
+
+  - script: |
+      echo ==== STARTING TEST EXECUTION ====
+      npm run test
+    displayName: Test Execution
+  
+  - task: PublishTestResults@2
+    displayName: Publish Junit Test Results
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'combined-report.xml'
+      searchFolder: 'report_Json/'
+      mergeTestResults: true
+      testRunTitle: 'TRM Junit Test Results'
+      publishRunAttachments: true
+      condition: succeededOrFailed()
+
+  - task: PublishCucumberReport@1
+    displayName: Publish Cucumber Test Results
+    inputs:
+      jsonDir: 'report_Json/html/'
+      outputPath: 'report_Json/html/'
+      theme: 'hierarchy'
+      reportSuiteAsScenarios: true
+      name: 'Test'
+      title: 'DEV Cucumber Report'

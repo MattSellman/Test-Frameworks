@@ -1,0 +1,16 @@
+{
+    
+    "video": true,
+    "screenshotOnRunFailure": true,
+    "ignoreTestFiles": ["*.js", "*.md"],
+    "chromeWebSecurity": false,
+    "testFiles": "**/*.feature",
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "report_Json/Junit_Report-[hash].xml"
+    },
+    "env": {
+        "TAGS": "not @ignore"
+    }
+  }
+  

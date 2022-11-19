@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-HttpBuilder-Template", "CSharp-HttpBuilder-Template\CSharp-HttpBuilder-Template.csproj", "{A885E8A9-28BA-4BAE-AB74-AD405282C7CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A885E8A9-28BA-4BAE-AB74-AD405282C7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A885E8A9-28BA-4BAE-AB74-AD405282C7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A885E8A9-28BA-4BAE-AB74-AD405282C7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A885E8A9-28BA-4BAE-AB74-AD405282C7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
